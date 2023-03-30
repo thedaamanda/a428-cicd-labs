@@ -6,5 +6,9 @@ node {
         stage('Test') {
             sh './jenkins/scripts/test.sh'
         }
+        stage('Deploy') {
+            sh './jenkins/scripts/deliver.sh'
+            sh 'sleep 60'
+        }
     }
 }
